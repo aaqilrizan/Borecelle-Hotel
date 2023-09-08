@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/ticket.css">
+  <link rel="stylesheet" href="css/universal.css">
+  
+    <title>Borecelle Hotel | Ticket Bookings </title>
+</head>
+
+<body>
+    <header>
+        <div class="container" id="top">
+          <div class="gotop">
+            <a href="#top">&#8593;</a>
+          </div>
+        
+
+          <a href="index.html"><img src="images/logo.png" class="logo" alt="logo"></a>
+          
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="hotelbranch.html">Hotel Branches</a></li>
+              <li><a href="adventure.html">Adventures</a></li>
+              <li><a href="resturant.html">Restaurants</a></li>
+              <li><a href="ticket.html">Booking</a></li>
+              <li><a class="ts" href="wedding.html">Events</a>
+                <ul class="dropdown">
+                <li><a href="wedding.html">weddings</a></li>
+                <li><a href="parties.html">parties</a></li>
+                </ul>
+              </li>
+            </ul>
+            
+        </nav>
+        </div>
+    </header>
+    <div class="hero-image">
+        <div class="hero-text">
+          <h1>Ticket Bookings</h1>
+        </div>
+    </div>
+    <form form class="form">
+    <div class="wrapper">
+        <div class="title">
+          Booking 
+        </div>
+        <h2>GUESTS</h2>
+        <div class="form">
+           <div class="inputfield">
+              <label for="fname">First Name</label>
+              <input type="text" class="input" required="required" id="fname"/>
+           </div>  
+            <div class="inputfield">
+              <label for="lname">Last Name</label>
+              <input type="text" class="input" required="required" id="lname"/>
+           </div>  
+        
+            <div class="inputfield">
+              <label>Gender</label>
+              <div class="custom_select">
+                <select id="gender">
+                
+                  <option value="male" selected>Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+           </div> 
+            <div class="inputfield">
+              <label for="email">Email Address</label>
+              <input type="email" class="input" required="required" name="email" id="email">
+           </div> 
+           <div class="inputfield">
+            <label for="cnfrmmail">Confirm Email Address</label>
+            <input type="email" class="input" name="confirmmail" id="cnfrmmail">
+         </div> 
+          <div class="inputfield">
+              <label for="tel">Phone Number</label>
+              <input type="tel" class="input" required="required" name="phone" id="tel" maxlength="10" >
+           </div>
+
+
+           <html>
+<head>
+</head>
+<body>
+  <form id="ticketForm">
+    <h2>RESERVATION DETAILS</h2>
+    <div class="inputfield">
+      <label for="checkin">Check-in</label>
+      <input type="date" class="input" required="required" id="checkin">
+    </div>
+    <div class="inputfield">
+      <label for="checkout">Check-out</label>
+      <input type="date" class="input" required="required" id="checkout">
+    </div>
+    <div class="inputfield">
+      <label for="adults">No. of Adults</label>
+      <input type="number" name="num" class="input" min="1" required id="adults" onblur="costCalculation();"> 
+    </div>
+    <div class="inputfield">
+      <label for="children">No. of Children</label>
+      <input type="number" name="num" class="input" min="1" required id="children" onblur="costCalculation();"> 
+    </div>
+    
+    <h2>ROOM RESERVATION</h2>
+    
+    <div class="inputfield">
+      <label for="deluxe">Deluxe Room</label>
+      <input type="number" name="num" class="input" min="0" required id="deluxe" onblur="costCalculation();"> 
+    </div>
+    
+    <div class="inputfield">
+      <label for="presidential">Presidential Room</label>
+      <input type="number" name="num" class="input" min="0" required id="presidential" onblur="costCalculation();"> 
+    </div>
+    
+    <div class="inputfield">
+      <label for="standard">Standard Room</label>
+      <input type="number" name="num" class="input" min="0" required id="standard" onblur="costCalculation();"> 
+    </div>
+    
+    <h2>Adventure</h2>
+    <div class="inputfield">
+      <label>Adventure Duration</label>
+      <div class="custom_select">
+        <select id="duration" onchange="costCalculation();">
+          <option value="0">3 Hours</option>
+          <option value="1">1/2 Day</option>
+          <option value="2">Full Day</option>
+        </select>
+      </div>
+    </div>
+        
+    <button type="submit">Calculate</button>
+  </form>
+  
+</body>
+</html>
+         
+    
+      <div class="inputfield">
+        <div class="button-container">
+          <input type="button" value="Add to Order" class="btn" id="add">
+          <input type="button" value="Check Loyalty" class="btn" id="loyalty">
+          <input type="button" value="Add to Favorites" class="btn" id="addfav">
+        </div>        
+      </div>
+    <p id="Output"></p>
+  </form>	
+  <div>
+    <h2>Checkout</h2>
+
+    <table>
+      <tbody>
+        <tr>
+          <td for="price">Price Total</td>
+          <td>  <span id="price"></span></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+    
+    <div class="booknow">
+      <input type="submit" value="Book Now" class="btn" id="add" onclick="booknow();">
+    </div>
+  </div>
